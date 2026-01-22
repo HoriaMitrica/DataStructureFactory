@@ -12,6 +12,7 @@ namespace DSFactory.Core
                 StructureType.Queue => new CustomQueue<T>(),
                 StructureType.DoublyLinkedList => new DoublyLinkedList<T>(),
                 StructureType.BinarySearchTree => new BinarySearchTree<T>(),
+                StructureType.Graph => new DirectedGraph<T>(),
                 _ => throw new ArgumentException("Invalid structure type selected.")
             }; 
         }

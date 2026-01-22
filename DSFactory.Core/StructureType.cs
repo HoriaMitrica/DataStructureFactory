@@ -5,6 +5,7 @@ namespace DSFactory.Core
         Stack, 
         Queue,
         DoublyLinkedList,
-        BinarySearchTree
+        BinarySearchTree,
+        Graph
     }
 }

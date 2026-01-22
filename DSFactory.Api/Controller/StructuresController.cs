@@ -5,7 +5,7 @@ using DSFactory.Api.Services;
 namespace DSFactory.Api.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")] 
+    [Route("api/[controller]")]
     public class StructuresController : ControllerBase
     {
         private readonly DataStore _store;
@@ -25,7 +25,7 @@ namespace DSFactory.Api.Controllers
 
             var structure = StructureFactory.Create<string>(type);
             _store.Structures[id] = structure;
-            
+
             return CreatedAtAction(nameof(GetStructureInfo), new { id = id }, structure);
         }
 
@@ -45,21 +45,22 @@ namespace DSFactory.Api.Controllers
             if (!_store.Structures.TryGetValue(id, out var ds))
                 return NotFound();
 
-            return Ok(new { 
-                Id = id, 
-                Type = ds.TypeName, 
-                Count = ds.Count 
+            return Ok(new
+            {
+                Id = id,
+                Type = ds.TypeName,
+                Count = ds.Count
             });
         }
 
         [HttpGet]
         public IActionResult GetAllStructures()
         {
-            var summary = _store.Structures.Select(kvp => new 
-            { 
-                Id = kvp.Key, 
-                Type = kvp.Value.TypeName, 
-                Count = kvp.Value.Count 
+            var summary = _store.Structures.Select(kvp => new
+            {
+                Id = kvp.Key,
+                Type = kvp.Value.TypeName,
+                Count = kvp.Value.Count
             });
             return Ok(summary);
         }
@@ -111,7 +112,7 @@ namespace DSFactory.Api.Controllers
         public IActionResult Export()
         {
             if (_store.Structures.IsEmpty) return BadRequest("No data.");
-            
+
             var content = _xmlService.ExportToXml();
             string fileName = $"DataFactory_Export_{DateTime.Now:yyyyMMdd_HHmmss}.xml";
             return File(content, "application/xml", fileName);
@@ -127,12 +128,28 @@ namespace DSFactory.Api.Controllers
 
             _store.Structures[id] = structure;
 
-            return Ok(new { 
+            return Ok(new
+            {
                 Message = "Smart Analysis Complete",
                 Decision = structure.TypeName,
                 Count = structure.Count,
                 Visual = structure.Display()
             });
+        }
+
+        [HttpPost("{id}/edge")]
+        public IActionResult AddEdge(string id, string from, string to)
+        {
+            if (!_store.Structures.TryGetValue(id, out var ds))
+                return NotFound($"Structure '{id}' not found.");
+
+            if (ds is DirectedGraph<string> graph)
+            {
+                graph.AddEdge(from, to);
+                return Ok($"Connected ({from}) -> ({to})");
+            }
+
+            return BadRequest($"Structure '{id}' is a {ds.TypeName}. It does not support Edges.");
         }
     }
 }

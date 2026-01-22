@@ -1,0 +1,139 @@
+<Import>
+  <Structure id="bst_balanced" type="BinarySearchTree">
+    <Item>08</Item> <Item>04</Item> <Item>12</Item> <Item>02</Item> <Item>06</Item> <Item>10</Item> <Item>14</Item> <Item>01</Item> <Item>03</Item> <Item>05</Item> <Item>07</Item> <Item>09</Item> <Item>11</Item> <Item>13</Item> <Item>15</Item>
+  </Structure>
+
+  <Structure id="bst_staircase" type="BinarySearchTree">
+    <Item>Step_1</Item>
+    <Item>Step_2</Item>
+    <Item>Step_3</Item>
+    <Item>Step_4</Item>
+    <Item>Step_5</Item>
+  </Structure>
+
+  <Structure id="bst_zigzag" type="BinarySearchTree">
+    <Item>50</Item>
+    <Item>25</Item> <Item>35</Item> <Item>30</Item> <Item>32</Item> </Structure>
+
+  <Structure id="bst_org_chart" type="BinarySearchTree">
+    <Item>CEO</Item>
+    <Item>CTO</Item> <Item>CFO</Item> <Item>VP_Eng</Item> <Item>Director</Item> </Structure>
+
+  <Structure id="graph_network_star" type="Graph">
+    <Edge from="Server_Hub" to="Workstation_1" />
+    <Edge from="Server_Hub" to="Workstation_2" />
+    <Edge from="Server_Hub" to="Workstation_3" />
+    <Edge from="Server_Hub" to="Printer_A" />
+    <Edge from="Server_Hub" to="Printer_B" />
+  </Structure>
+
+  <Structure id="graph_token_ring" type="Graph">
+    <Edge from="Node_A" to="Node_B" />
+    <Edge from="Node_B" to="Node_C" />
+    <Edge from="Node_C" to="Node_D" />
+    <Edge from="Node_D" to="Node_E" />
+    <Edge from="Node_E" to="Node_A" /> </Structure>
+
+  <Structure id="graph_workflow" type="Graph">
+    <Edge from="Start" to="Build_Code" />
+    <Edge from="Build_Code" to="Run_Tests" />
+    <Edge from="Run_Tests" to="Deploy_Staging" />
+    <Edge from="Deploy_Staging" to="Manual_Approval" />
+    <Edge from="Manual_Approval" to="Deploy_Prod" />
+    <Edge from="Deploy_Prod" to="Finish" />
+    <Edge from="Run_Tests" to="Report_Bug" />
+    <Edge from="Report_Bug" to="Build_Code" />
+  </Structure>
+
+  <Structure id="graph_social" type="Graph">
+    <Edge from="Alice" to="Bob" />
+    <Edge from="Alice" to="Charlie" />
+    <Edge from="Bob" to="Alice" />
+    <Edge from="Bob" to="David" />
+    <Edge from="Charlie" to="David" />
+    <Edge from="David" to="Eve" />
+    <Edge from="Eve" to="Alice" /> </Structure>
+
+  <Structure id="graph_flights" type="Graph">
+    <Edge from="NYC" to="London" />
+    <Edge from="NYC" to="Paris" />
+    <Edge from="London" to="Berlin" />
+    <Edge from="London" to="Dubai" />
+    <Edge from="Paris" to="Dubai" />
+    <Edge from="Dubai" to="Tokyo" />
+    <Edge from="Tokyo" to="Sydney" />
+  </Structure>
+
+  <Structure id="stack_browser" type="Stack">
+    <Item>Homepage</Item>
+    <Item>SearchResults</Item>
+    <Item>ProductPage_123</Item>
+    <Item>Checkout_Step1</Item>
+    <Item>Checkout_Step2</Item>
+    <Item>Order_Confirmed</Item>
+  </Structure>
+
+  <Structure id="queue_kitchen" type="Queue">
+    <Item>Order_401 (Burger)</Item>
+    <Item>Order_402 (Salad)</Item>
+    <Item>Order_403 (Pasta)</Item>
+    <Item>Order_404 (Steak)</Item>
+  </Structure>
+
+  <Structure id="dll_playlist" type="DoublyLinkedList">
+    <Item>Song_A.mp3</Item>
+    <Item>Song_B.mp3</Item>
+    <Item>Song_C.mp3</Item>
+    <Item>Song_D.mp3</Item>
+    <Item>Song_E.mp3</Item>
+  </Structure>
+
+  <Structure id="stack_hanoi" type="Stack">
+    <Item>Disk_Large</Item>
+    <Item>Disk_Medium</Item>
+    <Item>Disk_Small</Item>
+  </Structure>
+
+  <Structure id="queue_printer" type="Queue">
+    <Item>Report_Q1.pdf</Item>
+    <Item>Salary_Slip.docx</Item>
+    <Item>Memo.txt</Item>
+  </Structure>
+
+  <Structure id="graph_islands" type="Graph">
+    <Item>Island_A</Item>
+    <Item>Island_B</Item>
+    <Edge from="Island_A" to="Island_A" /> </Structure>
+
+  <Structure id="bst_alphabet" type="BinarySearchTree">
+    <Item>M</Item>
+    <Item>F</Item> <Item>S</Item>
+    <Item>C</Item> <Item>I</Item> <Item>P</Item> <Item>W</Item>
+    <Item>A</Item>
+  </Structure>
+
+  <Structure id="stack_empty" type="Stack">
+    </Structure>
+
+  <Structure id="queue_logs" type="Queue">
+    <Item>Info_1</Item> <Item>Info_2</Item> <Item>Info_3</Item> <Item>Info_4</Item> <Item>Info_5</Item>
+    <Item>Warn_1</Item> <Item>Warn_2</Item> <Item>Error_1</Item> <Item>Crit_1</Item>
+  </Structure>
+
+  <Structure id="dll_undo" type="DoublyLinkedList">
+    <Item>State_Initial</Item>
+    <Item>State_Modified</Item>
+    <Item>State_Saved</Item>
+  </Structure>
+
+  <Structure id="graph_filesystem" type="Graph">
+    <Edge from="Root/" to="Users/" />
+    <Edge from="Root/" to="Bin/" />
+    <Edge from="Users/" to="Guest/" />
+    <Edge from="Users/" to="Admin/" />
+    <Edge from="Admin/" to="Documents/" />
+    <Edge from="Documents/" to="Secret.txt" />
+    <Edge from="Guest/" to="Bin/" /> 
+  </Structure>
+
+</Import>

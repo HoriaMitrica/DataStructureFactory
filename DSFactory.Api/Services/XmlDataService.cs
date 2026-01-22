@@ -25,7 +25,7 @@ namespace DSFactory.Api.Services
                     string typeStr = element.Attribute("type")?.Value;
 
                     if (string.IsNullOrEmpty(id) || string.IsNullOrEmpty(typeStr))
-                        continue; 
+                        continue;
 
                     if (!Enum.TryParse(typeStr, true, out StructureType type))
                         continue;
@@ -37,6 +37,20 @@ namespace DSFactory.Api.Services
                     foreach (var itemNode in element.Descendants("Item"))
                     {
                         structure.Add(itemNode.Value);
+                    }
+                    
+                    if (structure is DirectedGraph<string> graph)
+                    {
+                        foreach (var edgeNode in element.Descendants("Edge"))
+                        {
+                            string? from = edgeNode.Attribute("from")?.Value;
+                            string? to = edgeNode.Attribute("to")?.Value;
+
+                            if (!string.IsNullOrEmpty(from) && !string.IsNullOrEmpty(to))
+                            {
+                                graph.AddEdge(from, to);
+                            }
+                        }
                     }
 
                     _store.Structures[id] = structure;
