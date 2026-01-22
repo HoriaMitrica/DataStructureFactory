@@ -1,0 +1,117 @@
+<Import>
+  <Structure id="server_logs" type="Stack">
+    <Item>Log_Start</Item>
+    <Item>Log_Warning</Item>
+    <Item>Log_Error</Item>
+  </Structure>
+
+  <Structure id="print_job" type="Queue">
+    <Item>Document_Final.pdf</Item>
+  </Structure>
+
+  <Structure id="browser_history" type="DoublyLinkedList">
+    <Item>google.com</Item>
+    <Item>github.com</Item>
+    <Item>stackoverflow.com</Item>
+    <Item>microsoft.com</Item>
+    <Item>openai.com</Item>
+  </Structure>
+
+  <Structure id="customer_waiting_line" type="Queue">
+    <Item>Customer_01</Item>
+    <Item>Customer_02</Item>
+    <Item>Customer_03</Item>
+    <Item>Customer_04</Item>
+    <Item>Customer_05</Item>
+    <Item>Customer_06</Item>
+    <Item>Customer_07</Item>
+    <Item>Customer_08</Item>
+    <Item>Customer_09</Item>
+    <Item>Customer_10</Item>
+  </Structure>
+
+  <Structure id="undo_stack" type="Stack">
+    <Item>Type 'H'</Item>
+    <Item>Type 'e'</Item>
+    <Item>Type 'l'</Item>
+    <Item>Type 'l'</Item>
+    <Item>Type 'o'</Item>
+    <Item>Backspace</Item>
+    <Item>Type '!'</Item>
+    <Item>Bold_Selection</Item>
+  </Structure>
+
+  <Structure id="music_playlist" type="DoublyLinkedList">
+    <Item>Track_01</Item>
+    <Item>Track_02</Item>
+    <Item>Track_03</Item>
+    <Item>Track_04</Item>
+    <Item>Track_05</Item>
+    <Item>Track_06</Item>
+    <Item>Track_07</Item>
+    <Item>Track_08</Item>
+    <Item>Track_09</Item>
+    <Item>Track_10</Item>
+    <Item>Track_11</Item>
+    <Item>Track_12</Item>
+    <Item>Track_13</Item>
+    <Item>Track_14</Item>
+    <Item>Track_15</Item>
+  </Structure>
+
+  <Structure id="notifications" type="Queue">
+    <Item>Email_Received</Item>
+    <Item>App_Update</Item>
+    <Item>Meeting_Reminder</Item>
+    <Item>Slack_Message</Item>
+  </Structure>
+
+  <Structure id="function_call_stack" type="Stack">
+    <Item>Main()</Item>
+    <Item>Init()</Item>
+    <Item>LoadConfig()</Item>
+    <Item>ParseXML()</Item>
+    <Item>ValidateSchema()</Item>
+    <Item>CheckHeader()</Item>
+    <Item>ReadAttribute()</Item>
+    <Item>ConvertType()</Item>
+    <Item>FactoryCreate()</Item>
+    <Item>Constructor()</Item>
+    <Item>AllocateMemory()</Item>
+    <Item>InitializeList()</Item>
+    <Item>AddItems()</Item>
+    <Item>ValidateItem()</Item>
+    <Item>UpdateCount()</Item>
+    <Item>LogSuccess()</Item>
+    <Item>ReturnObj()</Item>
+    <Item>Cleanup()</Item>
+  </Structure>
+
+  <Structure id="network_packets" type="Queue">
+    <Item>Packet_001</Item>
+    <Item>Packet_002</Item>
+    <Item>Packet_003</Item>
+    <Item>Packet_004</Item>
+    <Item>Packet_005</Item>
+    <Item>Packet_006</Item>
+    <Item>Packet_007</Item>
+    <Item>Packet_008</Item>
+    <Item>Packet_009</Item>
+    <Item>Packet_010</Item>
+    <Item>Packet_011</Item>
+    <Item>Packet_012</Item>
+    <Item>Packet_013</Item>
+    <Item>Packet_014</Item>
+    <Item>Packet_015</Item>
+    <Item>Packet_016</Item>
+    <Item>Packet_017</Item>
+    <Item>Packet_018</Item>
+    <Item>Packet_019</Item>
+    <Item>Packet_020</Item>
+  </Structure>
+
+  <Structure id="nav_buttons" type="DoublyLinkedList">
+    <Item>Back</Item>
+    <Item>Forward</Item>
+  </Structure>
+</Import>

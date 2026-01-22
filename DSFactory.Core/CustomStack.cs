@@ -1,11 +1,17 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 
 namespace DSFactory.Core
 {
     public class CustomStack<T> : IDataStructure<T>
     {
+
         private readonly List<T> _items = new List<T>();
+        public StructureType StructureType => StructureType.Stack;
+
+        public IEnumerator<T> GetEnumerator() => _items.GetEnumerator();
+        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
 
         public string TypeName => "Stack";
         public int Count => _items.Count;

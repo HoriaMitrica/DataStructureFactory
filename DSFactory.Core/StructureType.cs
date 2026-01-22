@@ -4,6 +4,7 @@ namespace DSFactory.Core
     { 
         Stack, 
         Queue,
-        DoublyLinkedList
+        DoublyLinkedList,
+        BinarySearchTree
     }
 }

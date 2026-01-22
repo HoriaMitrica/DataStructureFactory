@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 
 namespace DSFactory.Core
@@ -7,7 +8,10 @@ namespace DSFactory.Core
     public class CustomQueue<T> : IDataStructure<T>
     {
         private readonly List<T> _items = new List<T>();
+        public StructureType StructureType => StructureType.Queue;
 
+        public IEnumerator<T> GetEnumerator() => _items.GetEnumerator();
+        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
         public string TypeName => "Queue";
         public int Count => _items.Count;
 

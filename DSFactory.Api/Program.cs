@@ -12,8 +12,8 @@ builder.Services.AddControllers()
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
 builder.Services.AddSingleton<DataStore>();
+builder.Services.AddScoped<DSFactory.Api.Services.XmlDataService>();
 
 var app = builder.Build();
 

@@ -13,3 +13,4 @@ namespace DSFactory.Core
             Prev = null;
         }
     }
+}

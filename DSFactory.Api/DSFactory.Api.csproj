@@ -13,7 +13,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DSFactory.Core\DSFactory.Core.csproj" />
-    <ProjectReference Include="DSFactory.Api.csproj" />
   </ItemGroup>
 
 </Project>

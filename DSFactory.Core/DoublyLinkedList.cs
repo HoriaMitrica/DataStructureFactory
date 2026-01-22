@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 
 namespace DSFactory.Core
 {
@@ -7,7 +8,18 @@ namespace DSFactory.Core
         private Node<T>? _head;
         private Node<T>? _tail;
         private int _count;
+        public StructureType StructureType => StructureType.DoublyLinkedList;
 
+        public IEnumerator<T> GetEnumerator()
+        {
+            var current = _head;
+            while (current != null)
+            {
+                yield return current.Data;
+                current = current.Next;
+            }
+        }
+        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
         public string TypeName => "Doubly Linked List";
         public int Count => _count;
 
